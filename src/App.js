@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
+
+import AddTask from './components/AddTask';
 function App() {
+
+  const [lightTheme, setLightTheme] = useState(false);
+
+ 
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>  
+      <section className="main__section">
+         <AddTask
+          lightTheme={lightTheme}
+          setLightTheme={setLightTheme}
+         >
+          
+          </AddTask>
+         <div className={lightTheme ? "main__img__light" : "main__img"}></div>
+        <div className={lightTheme ? "main__color__bot__light" : "main__color__bot"}></div>
+        
+      </section>
+    </>
+   
   );
 }
 
