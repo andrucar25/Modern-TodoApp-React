@@ -36,13 +36,13 @@ body{
 /* Main Background ----------------------------------------*/
 .main__section{
   height: 100vh;
-  width: 100vw;
+  /* min-height: 980px; */
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* z-index: 1; */
 }
 
 .main__img{
@@ -54,7 +54,7 @@ body{
 }
 
 .main__color__bot{
-  height: 65%;
+  min-height: 65%;
   width: 100%;
   background-color: var(--VeryDarkBlue);
 }
@@ -77,6 +77,7 @@ body{
 }
 
 .todo__add__task{
+  min-height: 80px;
   height: 10%;
   width: 100%;
 }
@@ -129,6 +130,8 @@ body{
     border: none;
   margin-left: 15px;
   color: var(--LightGrayishBlue2);
+  min-height: 80px;
+  width: 85%;
 }
 
 .todo__text:hover{
@@ -136,7 +139,7 @@ body{
 }
 
 .todo__checkbox{
-  height: 20px; 
+  height: 20px;
   width: 20px;
   border-radius: 50%;
   background-color: var(--VeryDarkDesaturatedBlue);
@@ -168,7 +171,7 @@ body{
 
 .div_task{
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   background-color: var(--VeryDarkDesaturatedBlue);
   display: flex;
   align-items: center;
@@ -324,6 +327,8 @@ height: 30%;
     border: none;
   margin-left: 15px;
   color: var(--VeryDarkDesaturatedBlue);
+  min-height: 80px;
+  width: 85%;
 }
 
 .container__task__list__light{
@@ -337,7 +342,7 @@ height: 30%;
 
 .div_task__light{
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   background-color: var(--VeryLightGray);
   display: flex;
   align-items: center;
@@ -356,6 +361,7 @@ height: 30%;
     width: 100%;
   margin-left: 15px;
   color: var(--DarkGrayishBlue2); 
+  
 }
 
 .task__text__false__light{
@@ -384,3 +390,36 @@ height: 30%;
   font-size: 15px;
   color: var(--DarkGrayishBlue);
 }
+
+
+.options__main_responsive{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: var(--VeryDarkDesaturatedBlue);
+  border-radius: 5px;
+}
+
+.options__main_responsive__light{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: var(--VeryLightGray);
+  border-radius: 5px;
+}
+
+/*RESPONSIVE-------------------------------------*/
+@media (max-width: 1024px) { 
+  .todo__container{
+    
+    width: 90%;
+    
+  }
+  
+ }
